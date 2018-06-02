@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+<div class="pimg">
+
+  <%- include('partials/navbar') %>
+
+    <div class="ptext">
+      <span id="par-shadow" class="border">COME, FOLLOW ME</span>
+      <p class="para">EXPERIENCE THE CITY BY FOOT</p>
+    </div>
+
+</div>
+
+
+<section id="sec_one" class="section section-light">
+  <h2>GALLERY</h2>
+  <div class="wrapper">
+    <div class="box one">
+      <a href="#views/ny.ejs"></a>
+    </div>
+    <div class="box two"></div>
+    <div class="box three"></div>
+    <div class="box four"></div>
+    <div class="box five"></div>
+    <div class="box six"></div>
+  </div>
+</section>
+
+<div id="sec_two" class="pimg2">
+
+  <span class="border trans">CHOOSE CITY</span>
+  <div class="wrapper2">
+
+    <div class="box_city eight">
+      <h2 class="box-heading">
+        <a href="views/ny.ejs">NEW YORK</a>
+      </h2>
+    </div>
+    <div class="box_city nine">
+      <h2 class="box-heading">
+        <a href="views/ldn.ejs">LONDON</a>
+      </h2>
+    </div>
+    <div class="box_city ten">
+      <h2 class="box-heading">
+        <a href="views/cpt.ejs">CAPE TOWN</a>
+      </h2>
+    </div>
+    <div id="googleMap"></div>
+  </div>
+
+</div>
+<section class="section section-dark">
+  <h2>DISCOVER CITY LIFE</h2>
+  <p>Walk the streets, feel the buzz and discover urban adventure.</p>
+</section>
+
+<%- include('partials/footer') %>
+
+
+  <script>
+    function myMap() {
+      var mapProp = {
+        center: new google.maps.LatLng(51.508742, -0.120850),
+        zoom: 5,
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+
+    $('.handle').on('click', function () {
+      $('nav ul').toggleClass('showing');
+    });
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+  </body>
+
+</html>

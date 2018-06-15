@@ -11,7 +11,7 @@ html {
     .pimg2,
     .pimg3 {
         position: relative;
-        opacity: 0.70;
+        // opacity: 0.70;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -250,6 +250,18 @@ html {
         background-color: #282e34;
         color: #ddd;
     }
+
+    #form{
+           position: relative;
+           text-align: center;
+    }
+
+    #map{
+        height: 400px;
+        width: 100%;
+        z-index: -1;
+    }
+
     @media screen and (max-width: 568px) {
         .pimg,
         .pimg2,

@@ -12,7 +12,6 @@ html {
   html .pimg2,
   html .pimg3 {
     position: relative;
-    opacity: 0.70;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -244,6 +243,10 @@ html {
   html .section-dark {
     background-color: #282e34;
     color: #ddd; }
+  body #form,
+  html #form {
+    position: relative;
+    text-align: center; }
   @media screen and (max-width: 568px) {
     body .pimg,
     body .pimg2,

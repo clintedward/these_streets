@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- include libraries(jQuery, bootstrap) -->
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+    <!-- include summernote css/js-->
+    <!-- <link href="summernote.css" rel="stylesheet"> -->
+    <!-- <script src="summernote.js"></script> -->
+</head>
+
+<body>
+    <div class="pimg">
+
+        <%- include('partials/navbar') %>
+
+
+            <h3></h3>
+            <h2>Create a new destination</h2>
+
+
+            <form enctype="multipart/form-data" action="/destination" method="POST">
+
+                <label for="destination_name">Destination Name</label>
+                <input type="text" name="destination_name" placeholder="Destination Name">
+
+                <br>
+
+                <label for="meta_description">Meta Description</label>
+                <input type="text" name="meta_description" placeholder="Meta description">
+
+                <br>
+
+                <label for="write_up_header">Write </label>
+                <input type="text" name="write_up_header" placeholder="Header for write-up">
+
+                <br>
+
+                <label for="write_up">Destination write-up</label>
+                <textarea type="text" name="write_up" placeholder="Destination write-up approx 150 words">
+                </textarea>
+
+                <br>
+
+                <label for="coordinates">Google map coordinates - longitude + latitude</label>
+                <input type="text" name="longitude" placeholder="Destinations longitude">
+                <input type="text" name="latitude" placeholder="Destinations latitude">
+
+                <br>
+
+                <input type="file" name="uploaded_file">
+                <input type="file" name="uploaded_file2">
+                <input type="file" name="uploaded_file3">
+                <input type="file" name="uploaded_file4">
+                <input type="file" name="uploaded_file5">
+                <input type="file" name="uploaded_file6">
+                <input type="file" name="uploaded_file7">
+                <input type="file" name="uploaded_file8">
+                <input type="file" name="uploaded_file9">
+
+
+
+
+                <input type="submit">
+            </form>
+
+    </div>
+
+    <%- include('partials/footer') %>
+        <!-- <script>
+ $(document).ready(function() { $('#summernote').summernote(); });
+</script> -->
+</body>
+
+</html>

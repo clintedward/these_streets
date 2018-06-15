@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+    <div class="pimg">
+
+        <%- include('partials/navbar') %>
+
+            <section>
+                <figcaption class="hp_img">
+                    <img src='/images/<%= destinations.uploaded_file%>' alt="">
+                    <div>
+                        <h2>
+                            <%= destinations.destination_name %>
+                        </h2>
+                        <p>
+                            <%= destinations.meta_description %>
+                        </p>
+                    </div>
+                </figcaption>
+            </section>
+
+    </div>
+    <section class="section section-dark">
+        <main id="main_destination">
+
+
+            <article>
+                <!-- Write up -->
+                <h2>
+                    <%= destinations.write_up_header %>
+
+                </h2>
+
+                <p>
+                    <%= destinations.write_up %>
+                </p>
+
+            </article>
+    </section>
+
+    <section id="sec_one" class="section section-light">
+        <h2>GALLERY</h2>
+        <div class="wrapper">
+            <div class="box one">
+                <img src="/images/<%= destinations.uploaded_file %>" width="300" height="200">
+            </div>
+            <div class="box two">
+                <img src="/images/<%= destinations.uploaded_file2 %>" width="300" height="200">
+            </div>
+            <div class="box three">
+                <img src="/images/<%= destinations.uploaded_file3 %>" width="300" height="200">
+            </div>
+            <div class="box four">
+                <img src="/images/<%= destinations.uploaded_file4 %>" width="300" height="200">
+            </div>
+            <div class="box five">
+                <img src="/images/<%= destinations.uploaded_file5 %>" width="300" height="200">
+            </div>
+            <div class="box six">
+                <img src="/images/<%= destinations.uploaded_file6 %>" width="300" height="200">
+            </div>
+        </div>
+    </section>
+
+    <div id="sec_two" class="pimg2">
+
+        <span class="border trans">CHOOSE CITY</span>
+        <div class="wrapper2">
+
+            <div class="box_city eight">
+                <h2 class="box-heading"></h2>
+                <img src="/images/<%= destinations.uploaded_file7 %>" width="300" height="200">
+            </div>
+            <div class="box_city nine">
+                <h2 class="box-heading"></h2>
+                <img src="/images/<%= destinations.uploaded_file8 %>" width="300" height="200">
+            </div>
+            <div class="box_city ten">
+                <h2 class="box-heading"></h2>
+                <img src="/images/<%= destinations.uploaded_file9 %>" width="300" height="200">
+            </div>
+            <div id="map">
+                <script>
+                    var map;
+
+                    function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {
+                                lat: -33.920528,
+                                lng: 18.422111
+                            },
+                            zoom: 6
+                        });
+                    }
+                </script>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN7MCpwUHB7iJgXjYmbE8bajIfn0Ducmo&callback=initMap" async
+            defer></script>
+
+</body>
+
+</html>
